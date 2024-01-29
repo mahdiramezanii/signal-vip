@@ -8,6 +8,7 @@ class Application extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: WelcomPage(),
     );
   }
@@ -16,19 +17,16 @@ class Application extends StatelessWidget {
 class WelcomPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('First Route'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          child: const Text('Open route'),
-          onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => HomeScrean(),
-            ));
-            // Navigate to second route when tapped.
-          },
+    return SafeArea(
+      child: Scaffold(
+      
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("خوش آمدید"),
+            Image(image: AssetImage("assets/w.png"),),
+      
+          ],
         ),
       ),
     );
