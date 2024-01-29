@@ -18,19 +18,48 @@ class Application extends StatelessWidget {
 class WelcomPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-      
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("خوش آمدید"),
-            Image(image: AssetImage("assets/w.png"),),
-      
-          ],
-        ),
-      ),
-    );
+    return Scaffold(
+        backgroundColor: Colors.cyan,
+        body: SafeArea(
+          child: DecoratedBox(
+            position: DecorationPosition.background,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+              image: AssetImage("assets/s.png"),
+              fit: BoxFit.fitHeight
+            )),
+            child: Center(
+                child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Text("data",style: TextStyle(color: Colors.red),),
+                Text("data"),
+                Text("data"),
+                Text("data"),
+                Text("data"),
+                Text("data"),
+                Text("data"),
+                Text("data"),
+                Text("data"),
+              ],
+            )),
+          ),
+        )
+        //  Column(
+
+        //   mainAxisAlignment: MainAxisAlignment.center,
+        //   children: [
+
+        //     Text(
+        //       "خوش آمدید",
+        //       style: TextStyle(fontSize: 33, fontWeight: FontWeight.w900),
+        //     ),
+        //     Image(
+        //       image: AssetImage("assets/w.png"),
+        //     ),
+        //   ],
+        // ),
+        );
   }
 }
 
