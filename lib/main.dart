@@ -40,8 +40,8 @@ class WelcomPage extends StatelessWidget {
                   shape: BeveledRectangleBorder(),
                 ),
                 onPressed: () {
-                  Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (BuildContext context) {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (BuildContext context) {
                     return HomeScrean();
                   }));
                 },
