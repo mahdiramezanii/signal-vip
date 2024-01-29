@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
+import 'package:signal_vip/main.dart.';
+import 'home_screan.dart';
+
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -34,10 +36,7 @@ class LoginPage extends StatelessWidget {
                   shape: BeveledRectangleBorder(),
                 ),
                 onPressed: () {
-                  Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (BuildContext context) {
-                    return HomeScrean();
-                  }));
+                  navigator_page(context);
                 },
                 child: Text(
                   "وارد شوید",
@@ -61,5 +60,12 @@ class LoginPage extends StatelessWidget {
             ],
           ),
         ));
+  }
+
+  void navigator_page(BuildContext context) {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (BuildContext context) {
+      return HomeScrean();
+    }));
   }
 }
