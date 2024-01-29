@@ -21,45 +21,32 @@ class WelcomPage extends StatelessWidget {
     return Scaffold(
         backgroundColor: Colors.cyan,
         body: SafeArea(
-          child: DecoratedBox(
-            position: DecorationPosition.background,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-              image: AssetImage("assets/s.png"),
-              fit: BoxFit.fitHeight
-            )),
-            child: Center(
-                child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Text("data",style: TextStyle(color: Colors.red),),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-              ],
-            )),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "خوش آمدید",
+                style: TextStyle(fontSize: 33, fontWeight: FontWeight.w900),
+              ),
+              Image(
+                image: AssetImage("assets/w.png"),
+              ),
+              OutlinedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (BuildContext context){
+                      return HomeScrean();
+                    })
+                  );
+                },
+                child: Text(
+                  "وارد شوید",
+                  style: TextStyle(color: Colors.black, fontSize: 20),
+                ),
+              )
+            ],
           ),
-        )
-        //  Column(
-
-        //   mainAxisAlignment: MainAxisAlignment.center,
-        //   children: [
-
-        //     Text(
-        //       "خوش آمدید",
-        //       style: TextStyle(fontSize: 33, fontWeight: FontWeight.w900),
-        //     ),
-        //     Image(
-        //       image: AssetImage("assets/w.png"),
-        //     ),
-        //   ],
-        // ),
-        );
+        ));
   }
 }
 
