@@ -24,9 +24,18 @@ class WelcomPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                "خوش آمدید",
-                style: TextStyle(fontSize: 33, fontWeight: FontWeight.w900),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "خوش آمدید ",
+                    style: TextStyle(fontSize: 33, fontWeight: FontWeight.w900),
+                  ),
+                  Icon(
+                    Icons.login,
+                    size: 40,
+                  ),
+                ],
               ),
               Image(
                 image: AssetImage("assets/welcome.png"),
@@ -40,8 +49,8 @@ class WelcomPage extends StatelessWidget {
                   shape: BeveledRectangleBorder(),
                 ),
                 onPressed: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (BuildContext context) {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (BuildContext context) {
                     return HomeScrean();
                   }));
                 },
