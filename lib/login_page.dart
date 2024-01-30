@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:signal_vip/main.dart.';
 import 'home_screan.dart';
+import "forget_password.dart";
 
 class LoginPage extends StatelessWidget {
   @override
@@ -36,7 +36,7 @@ class LoginPage extends StatelessWidget {
                   shape: BeveledRectangleBorder(),
                 ),
                 onPressed: () {
-                  navigator_page(context);
+                  navigator_page(context, HomeScrean());
                 },
                 child: Text(
                   "وارد شوید",
@@ -56,16 +56,27 @@ class LoginPage extends StatelessWidget {
                   "ثبت نام",
                   style: TextStyle(color: Colors.white, fontSize: 20.0),
                 ),
+              ),
+              TextButton(
+                onPressed: () {
+                  navigator_page(context, ForgetPasswordScrean());
+                },
+                child: Text(
+                  "فراموشی رمز عبور",
+                  style: TextStyle(
+                      color: const Color.fromARGB(255, 224, 224, 224),
+                      fontSize: 18),
+                ),
               )
             ],
           ),
         ));
   }
 
-  void navigator_page(BuildContext context) {
+  void navigator_page(BuildContext context, Widget page) {
     Navigator.of(context)
         .push(MaterialPageRoute(builder: (BuildContext context) {
-      return HomeScrean();
+      return page;
     }));
   }
 }

@@ -4,18 +4,25 @@ class HomeScrean extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: const Text('Second Route'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.of(context).pop(context);
-          },
-          child: const Text('Go back!'),
+        appBar: AppBar(
+          title: Text(
+            'vip اخبار سیگنال',
+            style: TextStyle(fontSize: 28.0),
+          ),
+          centerTitle: true,
+          backgroundColor: Colors.white,
+          iconTheme: IconThemeData(color: Colors.black),
         ),
-      ),
-    );
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image(
+                image: AssetImage("assets/s.png"),
+              ),
+            ),
+          ),
+        ));
   }
 }
