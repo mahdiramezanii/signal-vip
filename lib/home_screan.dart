@@ -29,11 +29,6 @@ class HomeScrean extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w900),
             ),
-            Divider(
-              color:Colors.black,
-            
-              thickness: 0.5,
-            ),
             SizedBox(
               height: 13,
             ),
@@ -62,7 +57,15 @@ class HomeScrean extends StatelessWidget {
                   size: 17.0,
                 ),
               ],
-            )
+            ),
+            Container(
+              padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
+              width: MediaQuery.of(context).size.width / 2,
+              child: Divider(
+                color: Colors.black,
+                thickness: 0.7,
+              ),
+            ),
           ],
         ),
       ),
