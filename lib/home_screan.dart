@@ -24,11 +24,11 @@ class HomeScrean extends StatelessWidget {
             children: [
               getHomePost(context, "s.png",
                   "  برای تاریخ 14 آبان SafeMoon سیگنال خرید "),
-                  getHomePost(context, "a.png",
+              getHomePost(context, "a.png",
                   "  برای تاریخ 14 آبان SafeMoon سیگنال خرید "),
-                  getHomePost(context, "c.png",
+              getHomePost(context, "c.png",
                   "  برای تاریخ 14 آبان SafeMoon سیگنال خرید "),
-                  getHomePost(context, "r.png",
+              getHomePost(context, "r.png",
                   "  برای تاریخ 14 آبان SafeMoon سیگنال خرید "),
               SizedBox(
                 height: 15,

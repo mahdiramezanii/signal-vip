@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 
-Widget getHomePost(context,String image,String title) {
+Widget getHomePost(context, String image, String title) {
   return Column(
     children: [
       ClipRRect(
