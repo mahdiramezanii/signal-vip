@@ -4,25 +4,68 @@ class HomeScrean extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'vip اخبار سیگنال',
-            style: TextStyle(fontSize: 28.0),
-          ),
-          centerTitle: true,
-          backgroundColor: Colors.white,
-          iconTheme: IconThemeData(color: Colors.black),
+      appBar: AppBar(
+        title: Text(
+          'vip اخبار سیگنال',
+          style: TextStyle(fontSize: 28.0),
         ),
-        body: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ClipRRect(
+        centerTitle: true,
+        backgroundColor: Colors.white,
+        iconTheme: IconThemeData(color: Colors.black),
+      ),
+      body: Padding(
+        padding: EdgeInsets.all(8.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            ClipRRect(
               borderRadius: BorderRadius.circular(10),
               child: Image(
                 image: AssetImage("assets/s.png"),
               ),
             ),
-          ),
-        ));
+            Text(
+              " برای 14 آبان SafeMoon سیگنال خرید ",
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w900),
+            ),
+            Divider(
+              color:Colors.black,
+            
+              thickness: 0.5,
+            ),
+            SizedBox(
+              height: 13,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "خرید روی 234.98",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 15.0, color: Colors.green),
+                ),
+                Icon(
+                  Icons.price_check,
+                  size: 25,
+                  color: Colors.green,
+                ),
+                SizedBox(width: 10),
+                Text(
+                  "فروش روی 123.65",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(color: Colors.red, fontSize: 15.0),
+                ),
+                Icon(
+                  Icons.sell,
+                  color: Colors.red,
+                  size: 17.0,
+                ),
+              ],
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
