@@ -1,6 +1,7 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:signal_vip/custom_widget/home_post_widget.dart';
 
 class HomeScrean extends StatelessWidget {
   @override
@@ -21,205 +22,20 @@ class HomeScrean extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: Image(
-                  image: AssetImage("assets/s.png"),
-                ),
-              ),
-              Text(
-                " برای 14 آبان SafeMoon سیگنال خرید ",
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w900),
-              ),
-              SizedBox(
-                height: 13,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "خرید روی 234.98",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 15.0, color: Colors.green),
-                  ),
-                  Icon(
-                    Icons.price_check,
-                    size: 25,
-                    color: Colors.green,
-                  ),
-                  SizedBox(width: 10),
-                  Text(
-                    "فروش روی 123.65",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.red, fontSize: 15.0),
-                  ),
-                  Icon(
-                    Icons.sell,
-                    color: Colors.red,
-                    size: 17.0,
-                  ),
-                ],
-              ),
-              Container(
-                padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
-                width: MediaQuery.of(context).size.width / 2,
-                child: Divider(
-                  color: Colors.black,
-                  thickness: 0.7,
-                ),
-              ),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: Image(
-                  image: AssetImage("assets/s.png"),
-                ),
-              ),
-              Text(
-                " برای 14 آبان SafeMoon سیگنال خرید ",
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w900),
-              ),
-              SizedBox(
-                height: 13,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "خرید روی 234.98",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 15.0, color: Colors.green),
-                  ),
-                  Icon(
-                    Icons.price_check,
-                    size: 25,
-                    color: Colors.green,
-                  ),
-                  SizedBox(width: 10),
-                  Text(
-                    "فروش روی 123.65",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.red, fontSize: 15.0),
-                  ),
-                  Icon(
-                    Icons.sell,
-                    color: Colors.red,
-                    size: 17.0,
-                  ),
-                ],
-              ),
-              Container(
-                padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
-                width: MediaQuery.of(context).size.width / 2,
-                child: Divider(
-                  color: Colors.black,
-                  thickness: 0.7,
-                ),
-              ),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: Image(
-                  image: AssetImage("assets/s.png"),
-                ),
-              ),
-              Text(
-                " برای 14 آبان SafeMoon سیگنال خرید ",
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w900),
-              ),
-              SizedBox(
-                height: 13,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "خرید روی 234.98",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 15.0, color: Colors.green),
-                  ),
-                  Icon(
-                    Icons.price_check,
-                    size: 25,
-                    color: Colors.green,
-                  ),
-                  SizedBox(width: 10),
-                  Text(
-                    "فروش روی 123.65",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.red, fontSize: 15.0),
-                  ),
-                  Icon(
-                    Icons.sell,
-                    color: Colors.red,
-                    size: 17.0,
-                  ),
-                ],
-              ),
-              Container(
-                padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
-                width: MediaQuery.of(context).size.width / 2,
-                child: Divider(
-                  color: Colors.black,
-                  thickness: 0.7,
-                ),
-              ),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: Image(
-                  image: AssetImage("assets/s.png"),
-                ),
-              ),
-              Text(
-                " برای 14 آبان SafeMoon سیگنال خرید ",
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w900),
-              ),
-              SizedBox(
-                height: 13,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "خرید روی 234.98",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 15.0, color: Colors.green),
-                  ),
-                  Icon(
-                    Icons.price_check,
-                    size: 25,
-                    color: Colors.green,
-                  ),
-                  SizedBox(width: 10),
-                  Text(
-                    "فروش روی 123.65",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.red, fontSize: 15.0),
-                  ),
-                  Icon(
-                    Icons.sell,
-                    color: Colors.red,
-                    size: 17.0,
-                  ),
-                ],
-              ),
-              Container(
-                padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
-                width: MediaQuery.of(context).size.width / 2,
-                child: Divider(
-                  color: Colors.black,
-                  thickness: 0.7,
-                ),
-              ),
+              getHomePost(context, "s.png",
+                  "  برای تاریخ 14 آبان SafeMoon سیگنال خرید "),
+                  getHomePost(context, "a.png",
+                  "  برای تاریخ 14 آبان SafeMoon سیگنال خرید "),
+                  getHomePost(context, "c.png",
+                  "  برای تاریخ 14 آبان SafeMoon سیگنال خرید "),
+                  getHomePost(context, "r.png",
+                  "  برای تاریخ 14 آبان SafeMoon سیگنال خرید "),
               SizedBox(
                 height: 15,
               ),
               ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     elevation: 50,
-                    
                     backgroundColor: Color.fromARGB(255, 229, 67, 55),
                   ),
                   onPressed: () {
@@ -231,7 +47,7 @@ class HomeScrean extends StatelessWidget {
                   )),
               SizedBox(
                 height: 12,
-              )
+              ),
             ],
           ),
         ),
